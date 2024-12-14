@@ -6,13 +6,13 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400..800&family=DM+Serif+Text:ital@0;1&family=Fredericka+the+Great&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400..800&family=DM+Serif+Text:ital@0;1&family=Fredericka+the+Great&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&&family=Rubik+Iso&display=swap" rel="stylesheet">
     <title>Hand Cricket Vj</title>
 </head>
 <body>
     <div class="heading-bar">
         <h1 onclick="refreshPage()">Hand Cricket 🏏</h1>
-        <h4 id="reset-btn" onclick="resetFunction()">Reset</h4>
+        <h4 id="level-btn" onclick="changeLevel()"></h4>
     </div>
     <div class="container">
         <form>
@@ -23,7 +23,7 @@
                     <h3 id="comp-score">0</h3>
                     <h4 id="commentry">Let's start...!</h4>
             </div><br>
-            <div class="user_button">
+            <div id="user_button">
                 <input type="button" class="btn" value= 1 onclick="clickFunction(this)">
                 <input type="button" class="btn" value= 2 onclick="clickFunction(this)">
                 <input type="button" class="btn" value= 3 onclick="clickFunction(this)">
@@ -36,6 +36,18 @@
                 <input type="button" class="btn" value= 10 onclick="clickFunction(this)">
             </div>   
         </form>
+    </div>
+    <div id="lose-page">
+        <div id="lose-page-container">
+            <H1>You lose</H1>
+            <H2 id="score-card-level"></H2>
+            <H3 id="score-card">Your score is 45</H3>
+            <img src="restart-button.png" id="restart-img" onclick="resetFunction()" />
+        </div>
+    </div>
+    <div id="level-change-page">
+        <h1 id="lcp-lvl">LEVEL: EASY</h1>
+        <img id="lcp-img" src="easy-level.png">
     </div>
     <script src="script.js"></script>
 </body>
