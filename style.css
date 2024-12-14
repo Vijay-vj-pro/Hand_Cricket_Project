@@ -12,9 +12,14 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'raleway',sans-serif;
+    overflow-x: hidden;
+    justify-content: center;
+    align-items: center;
 }
 .heading-bar{
     width: 100%;
+    min-height: 30px;
+    max-height: 80px;
     background-color: rgb(238, 41, 81);
     padding: 25px;
     display: flex;
@@ -67,7 +72,7 @@ form{
     background-color: rgba(255, 255, 255, 0.137);
     backdrop-filter: blur(15px);
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     width: 40%;
     height: fit-content;
     align-items: center;
@@ -85,17 +90,15 @@ form{
     margin-top: 20px;
 }
 #display-box h3{
-    width: 100%;
+    width: fit-content;
     margin: 20px;
     justify-content: space-around;
     align-items: center;
     display:flex;
-    flex-direction: column;
     border-radius: 10px;
     color: rgba(0, 0, 0, 0.336);
     font-size: 90px;
     text-align: center;
-    flex-basis: 40%;
     cursor: default;
 }
 #display-box  h4{
@@ -124,7 +127,7 @@ form{
 .btn{
     width: 50px;
     height: 50px;
-    border-radius:30px;
+    border-radius:50%;
     flex-direction: column;
     flex-wrap: wrap;
     padding: 10px;
@@ -146,6 +149,7 @@ form{
     will-change: box-shadow,transform;
     cursor: pointer;
     visibility: visible;
+    outline: none;
 }
 .btn:focus{
     box-shadow: #96e1ff 0 0 0 1.5px inset, rgba(45, 35, 66, 0.5) 0 2px 4px, rgba(45, 35, 66, 0.4) 0 7px 13px -3px, #b1e0ff 0 -3px 0 inset;
@@ -251,4 +255,97 @@ form{
     width: 60px;
     height: 60px;
     margin: 30px;
+}
+#error-msg{
+    color: white;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    backdrop-filter: blur(10px);
+    padding: 10%;
+    background-color: #00000062;
+}
+
+@media only screen and (orientation: portrait) {
+    .heading-bar{
+        display: none;
+    }
+    .container{
+        display: none;
+    }
+    #error-msg{
+        display: flex;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .container{
+        height: fit-content;
+    }
+    .heading-bar{
+        height: 10vh;
+    }
+    .heading-bar h1{
+        font-size: 25px;
+    }
+    .container{
+        padding-top: 0px;
+    }
+    form{
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 30px;
+    }
+    #level-btn{
+        transform: scale(0.8);
+    }
+    #level-btn:active{
+        transform: none;
+    }
+    #level-btn:hover{
+        transform: none;
+    }
+    #display-box{
+        width: 60%;
+        box-shadow: rgba(0, 0, 0, 0.55) 0px 13px 27px -5px, rgba(0, 0, 0, 0.6) 0px 8px 16px -8px;
+    }
+    #user_button{
+        width: 35%;
+        flex-wrap: wrap;
+        padding: 10px;
+        border: 1px rgba(255, 255, 255, 0.521) solid;
+        box-shadow: rgba(0, 0, 0, 0.55) 0px 13px 27px -5px, rgba(0, 0, 0, 0.6) 0px 8px 16px -8px;
+    }
+    .btn{
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        border-radius: 50%;
+    }
+    #lose-page-container{
+        width: 50%;
+        height: 70vh;
+        justify-content: space-evenly;
+        padding: 5px;
+    }
+    #lose-page h1{
+        font-size: 25px;
+        margin: 0px;
+    }
+    #score-card-level{
+        font-size: 20px;
+        margin: 0px;
+    }
+    #score-card{
+        font-size: 25px;
+        margin: 0px;
+    }
+    #restart-img{
+        width: 50px;
+        margin: 0px;
+    }
 }

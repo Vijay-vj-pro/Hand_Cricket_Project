@@ -13,39 +13,39 @@ function changeLevel(){
     if(lvl == "Level : Easy"){
         lvl = "Level : Medium";
         document.getElementById('lcp-lvl').innerText= "Level : MEDIUM";
-        lcp.style.backgroundImage = 'radial-gradient( circle farthest-corner at 48.4% 47.5%,  rgb(200, 130, 240) 0%, rgb(103, 13, 126) 90% )';
+        lcp.style.backgroundImage = 'radial-gradient( circle farthest-corner at 48.4% 47.5%,  rgb(215, 148, 253) 0%, rgb(103, 13, 126) 90% )';
         lcpimg.src = "medium-level.png";
         lcp.style.display = 'flex';
         setTimeout(() => {
             lcp.style.display = 'none';
         }, 2000);
-        document.body.style.backgroundPosition = 'center center';
         levels.innerText = lvl;
         console.log(levels.innerText);
+        document.body.style.backgroundPosition = 'center center';
     }else if(lvl == "Level : Medium"){
         lvl = "Level : Hard";
-        lcp.style.backgroundImage = 'radial-gradient( circle farthest-corner at 48.4% 47.5%,  rgb(240, 116, 153) 0%, rgb(97, 7, 7) 90% )';
+        lcp.style.backgroundImage = 'radial-gradient( circle farthest-corner at 48.4% 47.5%,  rgb(255, 138, 173) 0%, rgb(97, 7, 7) 90% )';
         document.getElementById('lcp-lvl').innerText= "Level : HARD";
         lcpimg.src = "hard-level.png";
         lcp.style.display = 'flex';
         setTimeout(() => {
             lcp.style.display = 'none';
         }, 2000);
-        document.body.style.backgroundPosition = 'center bottom';
         levels.innerText = lvl;
         console.log(levels.innerText);
+        document.body.style.backgroundPosition = 'center bottom';
     }else if(levels.innerText = "Level : Hard"){
         lvl = "Level : Easy";
-        lcp.style.backgroundImage = 'radial-gradient( circle farthest-corner at 48.4% 47.5%,  rgb(136, 191, 253) 0%, rgb(2, 80, 175) 90% )';
+        lcp.style.backgroundImage = 'radial-gradient( circle farthest-corner at 48.4% 47.5%,  rgb(160, 204, 255) 0%, rgb(2, 80, 175) 90% )';
         document.getElementById('lcp-lvl').innerText= "Level : EASY";
         lcpimg.src = "easy-level.png";
         lcp.style.display = 'flex';
         setTimeout(() => {
             lcp.style.display = 'none';
         }, 2000);
-        document.body.style.backgroundPosition = 'center top';
         levels.innerText = lvl;
         console.log(levels.innerText);
+        document.body.style.backgroundPosition = 'center top';
     }else{
         lvl = "Error in level";
         levels.innerText = lvl;
@@ -70,7 +70,6 @@ function displayScore(){
 function clickFunction(numberValue){
     userScore.innerText = parseInt(numberValue.value);
     if(lvl == "Level : Easy"){
-        console.log("ec level is selected");
         var randNum = Math.floor((Math.random() * 10) + 1);
         compScore.innerText = parseInt(randNum);
         if(parseInt(numberValue.value) == parseInt(randNum)){
@@ -81,7 +80,6 @@ function clickFunction(numberValue){
             display.innerText = "Score: " + parseInt(score);
         }
     }else if(lvl == "Level : Medium"){
-        console.log("med level is selected");
         var Mtemp1 = Math.floor((Math.random() * 2) + 9);
         var Mtemp2 = Math.floor((Math.random() * 10) + 1);
         console.log(Mtemp1 +" and "+ Mtemp2);
@@ -99,7 +97,6 @@ function clickFunction(numberValue){
             display.innerText = "Score: " + parseInt(score);
         }
     }else if(lvl == "Level : Hard"){
-        console.log("Hard level is selected");
         var Htemp1 = Math.floor((Math.random() * 3) + 8);
         var Htemp2 = Math.floor((Math.random() * 10) + 1);
         var Htemp3 = Math.floor((Math.random() * 10) + 1);
