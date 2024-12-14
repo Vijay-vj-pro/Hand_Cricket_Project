@@ -7,6 +7,8 @@ var lvl = "Level : Easy";
 levels.innerText = lvl ;
 var lcp = document.getElementById('level-change-page');
 var lcpimg = document.getElementById('lcp-img');
+
+//function for change the levels
 function changeLevel(){
     if(lvl == "Level : Easy"){
         lvl = "Level : Medium";
@@ -51,6 +53,7 @@ function changeLevel(){
     }
 }
 
+//function to display the score board
 function displayScore(){
     setTimeout(() => {
         document.getElementById('lose-page').style.visibility = 'visible';
@@ -63,6 +66,7 @@ function displayScore(){
     }, 2000);
 }
 
+//function to click the number and generate random numbers by computer
 function clickFunction(numberValue){
     userScore.innerText = parseInt(numberValue.value);
     if(lvl == "Level : Easy"){
@@ -120,10 +124,12 @@ function clickFunction(numberValue){
     }
 }
 
+//function to refresh the page
 function refreshPage(){
     window.location.reload();
 }
 
+//function reset the score
 function resetFunction(){
     userScore.innerText = 0;
     compScore.innerText = 0;
