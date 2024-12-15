@@ -8,6 +8,17 @@ levels.innerText = lvl ;
 var lcp = document.getElementById('level-change-page');
 var lcpimg = document.getElementById('lcp-img');
 
+document.querySelector('.heading-bar').style.display = 'none';
+document.querySelector('.container').style.display = 'none';
+
+//function to click ok button in instructions page
+function goToGame(){
+    setTimeout(() => {
+        document.getElementById('instruction-page').style.display = 'none';
+        document.querySelector('.heading-bar').style.display = 'flex';
+        document.querySelector('.container').style.display = 'flex';
+    },1000);
+}
 //function for change the levels
 function changeLevel(){
     if(lvl == "Level : Easy"){
@@ -21,7 +32,6 @@ function changeLevel(){
         }, 2000);
         levels.innerText = lvl;
         console.log(levels.innerText);
-        document.body.style.backgroundPosition = 'center center';
     }else if(lvl == "Level : Medium"){
         lvl = "Level : Hard";
         lcp.style.backgroundImage = 'radial-gradient( circle farthest-corner at 48.4% 47.5%,  rgb(255, 138, 173) 0%, rgb(97, 7, 7) 90% )';
@@ -33,7 +43,6 @@ function changeLevel(){
         }, 2000);
         levels.innerText = lvl;
         console.log(levels.innerText);
-        document.body.style.backgroundPosition = 'center bottom';
     }else if(levels.innerText = "Level : Hard"){
         lvl = "Level : Easy";
         lcp.style.backgroundImage = 'radial-gradient( circle farthest-corner at 48.4% 47.5%,  rgb(160, 204, 255) 0%, rgb(2, 80, 175) 90% )';
@@ -45,7 +54,6 @@ function changeLevel(){
         }, 2000);
         levels.innerText = lvl;
         console.log(levels.innerText);
-        document.body.style.backgroundPosition = 'center top';
     }else{
         lvl = "Error in level";
         levels.innerText = lvl;

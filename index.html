@@ -10,9 +10,12 @@
     <title>Hand Cricket Vj</title>
 </head>
 <body>
-    <H1 id="error-msg">🎮Welcome to Handy Cricket 🏏Rotate the mobile to play 🔄</H1>
+    <div id="instruction-page">
+        <p id="instructions"><span>🎮 Game Instructions: 🏏</span><br><br/>Random Runs Cricket is a fun and simple game with 3 difficulty levels: Easy, Intermediate, and Hard. Players can score runs by clicking a number between 1 and 10, while the computer simultaneously generates a random number in the same range. If the player's chosen number matches the computer's generated number, the player is out, and the game ends. In Easy mode, the chances of matching are very low, in Intermediate mode they are moderate, and in Hard mode the chances are high. Keep scoring runs until you get out—aim for the highest score possible!</p>
+        <button id="instruction-ok" onclick="goToGame()">OK</button>
+    </div>
     <div class="heading-bar">
-        <h1 onclick="refreshPage()">Hand Cricket 🏏</h1>
+        <h1 onclick="refreshPage()">Random Runs Cricket 🏏</h1>
         <h4 id="level-btn" onclick="changeLevel()"></h4>
     </div>
     <div class="container">
@@ -25,7 +28,7 @@
                     <h4 id="commentry">Let's start...!</h4>
             </div>
             <div id="user_button">
-                <input type="button" class="btn" value= 1 onclick="clickFunction(this)">
+                <input type="button" class="btn" value= 1 onclick="clickFunction(this)" onmouseleave="colorChange(this)">
                 <input type="button" class="btn" value= 2 onclick="clickFunction(this)">
                 <input type="button" class="btn" value= 3 onclick="clickFunction(this)">
                 <input type="button" class="btn" value= 4 onclick="clickFunction(this)">
